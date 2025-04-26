@@ -80,8 +80,8 @@ See the examples directory in this repo for an example of running this on our
 Of course most users will have many directories to manage. A better option is to
 run a bash script that runs this script over those directories, and combining the
 Markdown docs into a website using a static site generator like MkDocs 
-https://www.mkdocs.org. A short example of such a script is included and an 
-example `mkdocs.yml` file.
+https://www.mkdocs.org. A short example of such a script is included `update_site_example.sh` 
+and an example mkdocs configuration file `mkdocs_example.yml`.
 
 ## Sections in the Markdown Document Output
 

@@ -1,7 +1,8 @@
 # MkDocs main configuration file.
-# This is an example mkdocs.yml that can form the basic of your own site.
+# This is an example mkdocs configuration file that can form the basic of your own site.
+# You will need to rename it from mkdocs_example.yml to mkdocs.yml
 # For its documentation go to: https://www.mkdocs.org
-# You will need to change most of the settings here.
+# You will need to change most of the settings below here.
 
 site_name: "Data Directory Catalog"
 site_url: "http://localhost"
