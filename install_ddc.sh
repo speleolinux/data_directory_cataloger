@@ -26,7 +26,7 @@ function get_installed_version {
     if [ -f ${dest}/ddc.py ]; then
         # A grep will return something like this:
         # version = "1.3.0 + 5 (gbb38009)"
-        installed_version=$(grep 'version = ' /opt/eresearch/ddc/bin/ddc.py)
+        installed_version=$(grep 'version = ' ${dest}/ddc.py)
         # Strip the text 'version = '.
         installed_version=${installed_version#version = }
         # Strip the leading and training quotes.
@@ -37,6 +37,8 @@ function get_installed_version {
 }
 
 function get_git_version {
+    # THIS FUNCTION IS NO LONGER USED.
+    #
     # This gets the current git version string.
     #
     # If this repo is checked out at a tagged release version then just
@@ -60,9 +62,11 @@ function get_git_version {
     commit_hash=$(echo $description | cut -d '-' -f3)  # e.g. g1d02627
     if [ $num_commits -eq 0 ]; then
         # This is a tagged release.
+        # The git_version will be just e.g. 1.3.0
         git_version=$version_num
     else
         # This version has commits after the last tagged release.
+        # The git_version will be like e.g. 1.3.0-34-gb0df536
         git_version="$version_num + $num_commits ($commit_hash)"
     fi
 }
@@ -125,7 +129,8 @@ echo ""
 
 # Get the current git version and if the user already has
 # a version installed get the version of that as well.
-get_git_version
+# get_git_version <== This function is no longer used.
+git_version=$(git describe --abbrev=0)
 get_installed_version
 
 # Check user really wants to install.
