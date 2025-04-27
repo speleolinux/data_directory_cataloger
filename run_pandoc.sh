@@ -7,6 +7,10 @@
 # This text file supplies the $styles and $options.
 source $HOME/public_html/css/pandoc.txt
 
+if [ ! -d tmp ]; then
+    mkdir tmp
+fi
+
 pandoc --css=$styles $options FAQ.md      > tmp/FAQ.html
 pandoc --css=$styles $options README.md   > tmp/README.html
 pandoc --css=$styles $options SECURITY.md > tmp/SECURITY.html
