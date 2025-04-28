@@ -29,5 +29,5 @@ mkdocs build
 
 # Rsync the "site" directory to your website directory.
 # If you wish to use --delete do not use "site/*" use "site/". Man rsync for why.
-rsync -r --delete site/ /var/www/html/
+#rsync -r --delete site/ /var/www/html/
 
