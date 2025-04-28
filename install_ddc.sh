@@ -14,6 +14,11 @@
 
 # Set the full path to the directory where you wish to install the DDC
 # programs here. Do not add any trailing / on the end.
+
+# For the ASF use this:
+dest='/opt/ddc/bin'
+
+# For the UTS us this:
 dest='/opt/eresearch/ddc/bin'
 
 # Nothing else below here needs to be changed.

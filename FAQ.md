@@ -22,7 +22,7 @@ database.
 Python changes and this script might not run with Python 4 or later.
 
 If you cannot run this script anymore nothing really breaks.
-Future researchers or data managers will see be able to find and understand the data's
+Future data owners or data managers will see be able to find and understand the data's
 metadata because:
 
 - The README.yaml files will still remain with the data in their directories.
