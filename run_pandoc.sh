@@ -15,7 +15,8 @@ pandoc --css=$styles $options FAQ.md      > tmp/FAQ.html
 pandoc --css=$styles $options README.md   > tmp/README.html
 pandoc --css=$styles $options SECURITY.md > tmp/SECURITY.html
 pandoc --css=$styles $options USAGE.md    > tmp/USAGE.html
-pandoc --css=$styles $options --toc TODO_Mikes.md > tmp/TODO_Mikes.html
+
+pandoc --css=$styles $options --toc ../misc_scratch/ddc_scratch/TODO_Mikes.md > tmp/TODO_Mikes.html
 
 pandoc --css=examples/styles.css $options examples/README_examples.md > tmp/README_examples.html
 
