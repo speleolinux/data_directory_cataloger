@@ -11,6 +11,8 @@ if [ ! -d tmp ]; then
     mkdir tmp
 fi
 
+#options="$options --shift-heading-level-by=0"
+
 pandoc --css=$styles $options FAQ.md      > tmp/FAQ.html
 pandoc --css=$styles $options README.md   > tmp/README.html
 pandoc --css=$styles $options SECURITY.md > tmp/SECURITY.html
