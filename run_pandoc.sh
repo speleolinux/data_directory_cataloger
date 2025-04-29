@@ -20,7 +20,3 @@ pandoc --css=$styles $options USAGE.md    > tmp/USAGE.html
 
 pandoc --css=examples/styles.css $options examples/README_examples.md > tmp/README_examples.html
 
-# Generate HTML of the test site.
-#./ddc.py tmp > test.md
-#pandoc --css=$styles --self-contained test.md > test.html
-
