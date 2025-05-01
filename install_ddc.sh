@@ -18,8 +18,8 @@
 # For the ASF use this:
 dest='/opt/ddc/bin'
 
-# For the UTS us this:
-dest='/opt/eresearch/ddc/bin'
+# For the UTS use this:
+#dest='/opt/eresearch/ddc/bin'
 
 # Nothing else below here needs to be changed.
 
@@ -98,7 +98,7 @@ function create_backup {
 function install_new_version {
 
     # Copy the main DDC program to the destination.
-    echo "Installing:"
+    echo "Installing into $dest:"
     echo "  ddc.py"
     cat ddc.py | sed "s/VERSION_STRING/$git_version/" > ${dest}/ddc.py
 
@@ -114,7 +114,7 @@ function install_new_version {
 
     # Allow any user to run ddc.py and write_readmes.py.
     # Because ddc.py only writes to stdout and write_readmes.py will not overwrite
-    # existing READMEs its safe for those with write access to those directories
+    # existing READMEs it's safe for those with write access to those directories
     # to run this.
     cp useful_scripts/write_readmes.py ${dest}
     chmod 755 ${dest}/write_readmes.py
@@ -162,8 +162,10 @@ if [ ! -d $dest ]; then
     echo "Creating directory $dest"
     mkdir -p $dest
     if [ $? -ne 0 ]; then
-        echo "Could not create directory $dest"
-        echo "Perhaps you need to use sudo. Exiting."
+        echo "Could not create the directory $dest"
+        echo "Perhaps you need to use sudo like this:"
+        echo " sudo $0"
+        echo "Exiting"
         exit 0
     fi
 fi
