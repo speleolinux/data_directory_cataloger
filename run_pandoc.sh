@@ -19,7 +19,7 @@ elif [[ "$pandoc_version" =~ ^3 ]]; then
 else
     echo "This version of pandoc is not supported, exiting."
     exit 0
-fi    
+fi
 
 # Note: Each options needs a space at the end.
 options="$options --toc --toc-depth=2 "
@@ -27,10 +27,8 @@ options="$options --shift-heading-level-by=1 "
 
 styles="css/styles.css"
 
-if [ ! -d tmp ]; then
-    echo "Creating directory tmp"        
-    mkdir tmp
-fi
+# Create tmp directory if it does not exist.
+if [ ! -d tmp ]; then echo "Creating directory tmp"; mkdir tmp; fi
 
 echo "Converting Markdown docs to HTML pages ..."
 pandoc --css=$styles $options README.md   > tmp/README.html
