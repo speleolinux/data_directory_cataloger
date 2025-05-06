@@ -1,4 +1,15 @@
-# README
+---
+title: README
+toc: true
+include-before: |
+  <a name="top"></a>
+  README &nbsp; 
+  [FAQ](FAQ.html) &nbsp;
+  [USAGE](USAGE.html) &nbsp; 
+  [SECURITY](SECURITY.html) &nbsp; 
+---
+
+# Description
 
 This is the Data Directory Cataloger. The purpose of it is to help manage
 numerous directories by having a README.yaml in most directories and which
@@ -27,7 +38,7 @@ dates.
 
 See the [Examples Readme](examples/README_examples.md) for a example HTML page and a screenshot.
 
-## Requirements
+# Requirements
 
 Python 3.6.8 or later with PyYAML 6.0 is required for the basic `ddc.py` program.
 The `write_readmes.py` program does not require any extra Python modules.
@@ -43,7 +54,7 @@ following mkdocs modules installed:
 It is best to install these into a Python virtual environment which can be sourced
 before running the programs. See the script `update_site_example.sh` as an example.
 
-## License
+# License
 
 Copyright 2022 Mike Lake     
 

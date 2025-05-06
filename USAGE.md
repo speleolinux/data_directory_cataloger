@@ -1,9 +1,20 @@
-# Detailed Usage
+---
+title: Usage
+toc: true
+include-before: |
+  <a name="top"></a>
+  [README](README.html) &nbsp; 
+  [FAQ](FAQ.html) &nbsp;
+  USAGE &nbsp; 
+  [SECURITY](SECURITY.html)
+---
+
 
 This covers some details on how you would use the Data Directory Cataloger to manage
 a collection of data directories. In this example I'm using my `hpc_examples` directory.
 This contains example scripts for a High Performance Computer cluster.
 
+<!--
 * [What a README.yaml Looks Like](#what-a-readmeyaml-looks-like)
 * [Writing your Initial README.yaml Files](#writing-your-initial-readmeyaml-files)
 * [How to run the DDC Program](#how-to-run-the-ddc-program)
@@ -14,8 +25,9 @@ This contains example scripts for a High Performance Computer cluster.
 * [Removing a Field](#removing-a-field)
 * [Modifying a Field](#modifying-a-field)
 * [Disallowed Characters](#disallowed-characters)
+-->
 
-## What a README.yaml Looks Like
+# What a README.yaml Looks Like
 
 Example: `/shared/opt/fastqc-0.10.1/README.yaml`
 
@@ -36,7 +48,7 @@ flagged as a warning that a metadata field might be missing.
 
 The README.yaml should be in StrictYAML format (https://github.com/crdoconnor/strictyaml).
 
-## Writing your Initial README.yaml Files 
+# Writing your Initial README.yaml Files 
 
 This short script can save a lot of time by writing a README.yaml
 file into each of the immediate subdirectories of a top level directory.
@@ -45,7 +57,7 @@ You need to edit it to change the text. Read the script.
 
     $ ./write_readmes.py top_level-directory [-t | --test]
 
-## How to run the DDC Program
+# How to run the DDC Program
 
 Get brief help on the program:
 
@@ -83,7 +95,7 @@ Markdown docs into a website using a static site generator like MkDocs
 https://www.mkdocs.org. A short example of such a script is included `update_site_example.sh` 
 and an example mkdocs configuration file `mkdocs_example.yml`.
 
-## Sections in the Markdown Document Output
+# Sections in the Markdown Document Output
 
 The "**Summary**" section of the Markdown document will summarize *some* of the metadata fields.
 This will always show the *Directory* that each README.yaml file was found in. 
@@ -101,7 +113,7 @@ A "**Metadata Warnings**" section will be shown at the top of the page if there 
 README.yaml files that are possibly missing a metadata field, or if a
 subdirectory is missing a README.yaml file.
 
-## Other Metadata Fields One Could Use
+# Other Metadata Fields One Could Use
 
 * Maintainer:
 * Provenance: Downloaded from xxx on 2020.01.01
@@ -109,7 +121,7 @@ subdirectory is missing a README.yaml file.
 * Data retention and disposal:
 * Minimum retention period:
 
-## Looking at README.yaml Files
+# Looking at README.yaml Files
 
 Find all the README.yaml files under just the immediate subdirectories.
 The `-mindepth 2` is added to the find command so it will not pick up
@@ -145,7 +157,7 @@ in a compact manner we can use:
     ./mpi/README.yaml  Earliest possible disposal date: 2024
     ./primes/README.yaml
 
-## Adding a Field
+# Adding a Field
 
 We can see from the output of the script below that most of my README.yaml
 files are missing the "Earliest possible disposal date" field. I'd like to
@@ -190,7 +202,7 @@ Done. If you run it again nothing will be changed.
     hpc_examples$ path_to/ddc_field_add.sh 
     $ 
 
-## Removing a Field
+# Removing a Field
 
 *Well there is also a script to help you do this!* &nbsp; Under `useful_scripts` you
 will find `ddc_field_remove.sh`. Edit that and insert into there the string
@@ -247,7 +259,7 @@ Now just repeat the command that printed the READMEs and check they all look OK.
 
 If you are certain that all is OK then you can now remove the `README_backups.tar`.
 
-## Modifying a Field
+# Modifying a Field
 
 *Yes, there is a script to help you do this!*
 
@@ -266,7 +278,7 @@ Make a backup as shown above, then run the script.
 
 You can use the example find commands above to look at the READMEs before and after the change.
 
-## Disallowed Characters
+# Disallowed Characters
 
 There are some characters that should not include in the README.yaml files.
 These characters are: `<  >  {  }  (  )  ;`

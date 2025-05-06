@@ -1,3 +1,8 @@
+---
+title: README for the DDC Examples
+toc: true
+---
+
 # README for these Examples
 
 In this directory are some examples of the output of the Data Directory Cataloger.
