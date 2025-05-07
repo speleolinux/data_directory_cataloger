@@ -9,6 +9,10 @@ include-before: |
   [SECURITY](SECURITY.html)
 ---
 
+<<<<<<< HEAD
+=======
+# Detailed Usage
+>>>>>>> b93fe2e (Added header includes)
 
 This covers some details on how you would use the Data Directory Cataloger to manage
 a collection of data directories. In this example I'm using my `hpc_examples` directory.
