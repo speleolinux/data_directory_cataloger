@@ -1,9 +1,5 @@
 ---
-<<<<<<< HEAD
 title: README
-=======
-title: README on the DDC
->>>>>>> b93fe2e (Added header includes)
 toc: true
 include-before: |
   <a name="top"></a>
@@ -13,11 +9,7 @@ include-before: |
   [SECURITY](SECURITY.html) &nbsp; 
 ---
 
-<<<<<<< HEAD
 # Description
-=======
-# README
->>>>>>> b93fe2e (Added header includes)
 
 This is the Data Directory Cataloger. The purpose of it is to help manage
 numerous directories by having a README.yaml in most directories and which

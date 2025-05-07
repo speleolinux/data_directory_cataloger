@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> b93fe2e (Added header includes)
 ---
 title: FAQ
 toc: true
@@ -12,11 +8,6 @@ include-before: |
   [USAGE](USAGE.html) &nbsp;
   [SECURITY](SECURITY.html)
 ---
-<<<<<<< HEAD
-=======
-
-# FAQ
->>>>>>> b93fe2e (Added header includes)
 
 # Why does this script not recurse?
 
