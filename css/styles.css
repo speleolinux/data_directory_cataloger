@@ -1,0 +1,39 @@
+/* Styles for pandoc produced documentation 
+ * Generally used by run_pandoc.sh scripts
+ * in several directories.
+ */
+
+body { margin: 10px; padding: 0; }
+
+h1 { font-size: 160%; font-family: Arial,Helvetica,sans-serif; }
+h2 { font-size: 120%; font-family: Arial,Helvetica,sans-serif; }
+h3 { font-size: 110%; margin-left: 2ex; }
+
+pre {
+  width: 80%;
+  margin: 4ex;
+  padding: 2ex;
+  background-color: #e6e6e6;
+}
+
+/* Pandoc puts block code inside a pre so it gets its 
+ * background color from the pre tag as above. */
+pre code { font-size: 120%; }
+
+/* Here we make inline code background a bit lighter grey. */
+p code { font-size: 110%; background-color: #f2f2f2; }
+
+blockquote {
+  margin: 3ex; 
+  padding: 2ex;
+  padding-top: 0ex;
+  padding-bottom: 0ex;
+  border-left: 2px solid #999;
+}
+blockquote p:before { content: '"'; }
+blockquote p:after  { content: '"'; }
+
+table { white-space:nowrap; border-collapse:collapse; }
+table, th, td { border:1px solid black; }
+th, td { padding:6px; }
+
