@@ -6,13 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>Data Directory Cataloger</title>
   <style>
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
-  </style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
   <style type="text/css">
 body { margin: 2ex; padding: 0; }
 
@@ -26,13 +34,14 @@ table th,td { border: 1px solid #666666; padding:1ex; }
 <body>
 <h1 id="directory-sharedopt">Directory <code>/shared/opt/</code></h1>
 <h2 id="summary">Summary</h2>
-<p>Found 5 README.yaml files in the directories under /shared/opt/. A summary of the metadata in these files follows.</p>
+<p>Found 5 README.yaml files in the directories under /shared/opt/. A
+summary of the metadata in these files follows.</p>
 <table>
 <colgroup>
-<col style="width: 24%"></col>
-<col style="width: 13%"></col>
-<col style="width: 29%"></col>
-<col style="width: 32%"></col>
+<col style="width: 24%" />
+<col style="width: 13%" />
+<col style="width: 29%" />
+<col style="width: 32%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -58,13 +67,16 @@ table th,td { border: 1px solid #666666; padding:1ex; }
 <tr class="odd">
 <td>/shared/opt/fastqc-0.10.1</td>
 <td>FastQC</td>
-<td>FastQC is a high throughput sequence QC analysis tool. It reads a set of sequence files and produces from each one a quality control report.</td>
+<td>FastQC is a high throughput sequence QC analysis tool. It reads a
+set of sequence files and produces from each one a quality control
+report.</td>
 <td>Mike Lake</td>
 </tr>
 <tr class="even">
 <td>/shared/opt/gromacs-2018.8</td>
 <td>GROMACS 2018.8</td>
-<td>Molecular dynamics package mainly designed for simulations of proteins, lipids, and nucleic acids. Compiled with PBS MPI.</td>
+<td>Molecular dynamics package mainly designed for simulations of
+proteins, lipids, and nucleic acids. Compiled with PBS MPI.</td>
 <td>Mike Lake</td>
 </tr>
 <tr class="odd">
@@ -76,14 +88,17 @@ table th,td { border: 1px solid #666666; padding:1ex; }
 </tbody>
 </table>
 <h2 id="metadata-information">Metadata Information</h2>
-<p>The following are all the 5 metadata attributes found in the README.yaml files. These should all be unique. If not edit and correct the README.yaml files.</p>
+<p>The following are all the 5 metadata attributes found in the
+README.yaml files. These should all be unique. If not edit and correct
+the README.yaml files.</p>
 <ul>
 <li>Data Manager</li>
 <li>Description</li>
 <li>Directory</li>
 <li>Title</li>
 </ul>
-<p>Checking each README.yaml file against the metadata list above … OK</p>
+<p>Checking each README.yaml file against the metadata list above …
+OK</p>
 <p>This page last updated on 2022-03-07 at 11:43 PM</p>
 </body>
 </html>

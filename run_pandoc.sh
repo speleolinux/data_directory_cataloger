@@ -35,7 +35,8 @@ pandoc --css=$styles $options README.md   > tmp/README.html
 pandoc --css=$styles $options FAQ.md      > tmp/FAQ.html
 pandoc --css=$styles $options SECURITY.md > tmp/SECURITY.html
 pandoc --css=$styles $options USAGE.md    > tmp/USAGE.html
-pandoc --css=examples/styles.css $options examples/README_examples.md > tmp/README_examples.html
+
+pandoc --css=css/styles.css $options examples/README_examples.md > tmp/README_examples.html
 
 echo "HTML versions of the docs have been written to the tmp/ directory."
 
