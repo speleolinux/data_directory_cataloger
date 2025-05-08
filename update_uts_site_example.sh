@@ -3,9 +3,9 @@
 # This is an example script showing how to use the Data Directory Cataloger
 # to process several directories, creating a Markdown file for each directory. 
 # Then combine those Markdown files into a single web site using the static
-# website generator MkDocs and upload the site.
+# website generator MkDocs and perhaps, upload the site.
 #
-# Usage: ./update_mkdocs_site.sh
+# Usage: ./update_uts_site_example.sh
 
 # These settings might be required depending on your terminal.
 export LC_ALL=C.UTF-8
@@ -29,5 +29,6 @@ mkdocs build
 
 # Rsync the "site" directory to your website directory.
 # If you wish to use --delete do not use "site/*" use "site/". Man rsync for why.
+# Uncomment this to upload to your site if its under /var/www/html/
 #rsync -r --delete site/ /var/www/html/
 
