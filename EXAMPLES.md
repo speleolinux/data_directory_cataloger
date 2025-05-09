@@ -1,6 +1,13 @@
 ---
-title: README for the DDC Examples
+title: EXAMPLES
 toc: true
+include-before: |
+  <a name="top"></a>
+  [README](README.html) &nbsp;
+  [FAQ](FAQ.html) &nbsp;
+  [USAGE](USAGE.html) &nbsp;
+  [SECURITY](SECURITY.html) &nbsp;
+  EXAMPLES
 ---
 
 # Description
