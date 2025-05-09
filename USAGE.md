@@ -3,10 +3,11 @@ title: Usage
 toc: true
 include-before: |
   <a name="top"></a>
-  [README](README.html) &nbsp; 
+  [README](README.html) &nbsp;
   [FAQ](FAQ.html) &nbsp;
-  USAGE &nbsp; 
-  [SECURITY](SECURITY.html)
+  USAGE &nbsp;
+  [SECURITY](SECURITY.html) &nbsp;
+  [EXAMPLES](EXAMPLES.html)
 ---
 
 This covers some details on how you would use the Data Directory Cataloger to manage

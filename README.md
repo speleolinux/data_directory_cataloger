@@ -3,10 +3,11 @@ title: README
 toc: true
 include-before: |
   <a name="top"></a>
-  README &nbsp; 
+  README &nbsp;
   [FAQ](FAQ.html) &nbsp;
-  [USAGE](USAGE.html) &nbsp; 
-  [SECURITY](SECURITY.html) &nbsp; 
+  [USAGE](USAGE.html) &nbsp;
+  [SECURITY](SECURITY.html) &nbsp;
+  [EXAMPLES](EXAMPLES.html)
 ---
 
 # Description

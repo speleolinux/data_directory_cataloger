@@ -6,7 +6,8 @@ include-before: |
   [README](README.html) &nbsp;
   FAQ &nbsp;
   [USAGE](USAGE.html) &nbsp;
-  [SECURITY](SECURITY.html)
+  [SECURITY](SECURITY.html) &nbsp;
+  [EXAMPLES](EXAMPLES.html)
 ---
 
 # Why does this script not recurse?
