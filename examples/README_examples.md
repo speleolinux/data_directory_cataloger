@@ -3,7 +3,7 @@ title: README for the DDC Examples
 toc: true
 ---
 
-# README for these Examples
+# Description
 
 In this directory are some examples of the output of the Data Directory Cataloger.
 
@@ -16,7 +16,7 @@ The second example is a screenshot of a website which describes the contents
 of multiple directories.    
 See [A MkDocs Website for Multiple Directories](#a-mkdocs-website-for-multiple-directories)
 
-## A Single Webpage for One Directory
+# A Single Webpage for One Directory
 
 This example shows how to create single webpage describing the directories below
 our `/shared/opt/` directory. This contains shared optional programs for our HPC.
@@ -41,7 +41,7 @@ The contents of this directory is like the list below:
 
 We need to create a README.yaml file under each of these directories.
 
-### Write the README.yaml Files
+## Write the README.yaml Files
 
 This short script just saves a bit of time by writing a README.yaml
 file into each of the sub-directories. The text of the README.yaml file
@@ -52,7 +52,7 @@ For this example nothing needed to be changed so it was just run.
 
 Each of the top level directories now contains a README.yaml file.
 
-### The README.yaml files under `/shared/opt/`
+## The README.yaml files under `/shared/opt/`
 
 These are what some of the README.yaml files now look like under the
 directory `/shared/opt/`.
@@ -89,14 +89,14 @@ directory `/shared/opt/`.
 
 As you can see above the READMEs contain the metadata describing each sub-directory in the READMEs.
 
-### Run the DDC Program
+## Run the DDC Program
 
 I then ran the Data Directory Cataloger program over the top level directory directory, directing
 the output to `example.md`:
     
     $ ./ddc.py /shared/opt > example.md
 
-### Use pandoc to Create a Webpage
+## Use pandoc to Create a Webpage
 
 Then I used "pandoc" to convert the "example.md" Markdown document into the
 "example.html" HTML page. 
@@ -110,14 +110,16 @@ file to be present when viewing the web page.
 
 You can install `pandoc` from your Linux distribution's repositories.
 
-## A MkDocs Website for Multiple Directories
+# A MkDocs Website for Multiple Directories
 
-The image here shows our eResearch website which was created using the Data
-Directory Cataloger to process several directories, creating a Markdown file
-for each directory, and combining those Markdown files into a single web site
-using the static website generator MkDocs. 
+The image here shows one of the pages of the eResearch website at the
+University of Technology Sydney. This was created using the Data Directory
+Cataloger to process several directories containing terabytes of data.
+The README.yaml files found one level below each of these directories were
+processed and a Markdown file created for each directory. They were then
+combined into a single web site using the static website generator "MkDocs". 
 
-You can create a similar site by copying the script `update_site_example.sh`
+You can create a similar site by copying the script `update_uts_site_example.sh`
 and editing it to suite your site.
 
 <p align="center" width="100%" style="text-align:center;">
