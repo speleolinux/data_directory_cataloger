@@ -119,8 +119,9 @@ The README.yaml files found one level below each of these directories were
 processed and a Markdown file created for each directory. They were then
 combined into a single web site using the static website generator "MkDocs". 
 
-You can create a similar site by copying the script `update_uts_site_example.sh`
-and editing it to suite your site.
+You can create a similar site by copying the MkDocs `mkdocs_uts_example.yml` to 
+`mkdocs.yml` and editing it to suit your site. 
+Also copy the script `update_uts_site_example.sh` and edit it to suit your site.
 
 <p align="center" width="100%" style="text-align:center;">
 <img src="examples/mkdocs_screenshot.png" alt="MkDocs site example" width="80%" style="border: 1px solid black;"/>
