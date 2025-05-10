@@ -19,7 +19,7 @@ you would store might be "Description", "Data Manager" and "Disposal Date".
 
 This was developed for the Australian Speleological Federation to assist them
 in managing their AWS S3 buckets of data. It's also currently being trialled
-by Mike Lake for a data store at the University of Technology Sydney.
+by Mike Lake for managing some data at the University of Technology Sydney.
 
 When the `ddc.py` program is run on a directory it looks for `README.yaml` files
 in the **immediate** subdirectories. From those `README.yaml` files it reads the
