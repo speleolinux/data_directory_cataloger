@@ -3,17 +3,54 @@
 # Create a catalog of a multiple directories as an example
 # of an entire site's data being cataloged.
 
+#################################
+# Settings that can be configured
+#################################
+
 data_dir="science"      # The directory to read.
 site_dir="science_site" # The directory to write the Markdown files into.
 
+# Location of the Python virtual environment that provides the 
+# MkDocs static website generator.
+# This directory should contain the "bin/activate" script.
+# Do not add a trailing slash at the end of this location.
+virt_env="$HOME/virt_environments/mkdocs"
+
 ddc="../../ddc.py"      # Where to find the DDC program.
+
+#############################
+# Check for missing stuff etc
+#############################
 
 # Check this script is being run from the "Multiple_Example" directory.
 PWD=$(pwd)
 if [ ${PWD##*/} != 'Multiple_Example' ]; then
-    echo "This script needs to be run from the tests directory. Exiting."
-    exit
+    echo "This script needs to be run from within the \"Multiple_Example\" directory."
+    echo "Exiting"
+    exit 0
 fi
+
+# Check we have the virtual env to activate.
+if [ -d $virt_env ]; then
+    source "${virt_env}/bin/activate"
+else
+    echo "Cannot find directory $virt_env"
+    echo "This should be a Python virtual environment with MkDocs installed."
+    echo "Exiting"
+    exit 0    
+fi
+
+# Finally check we now have a mkdocs command found.
+which mkdocs > /dev/null 2>&1
+if [ "$?" -ne 0 ]; then
+    echo "Cannot find the mkdocs command: ${virt_env}/bin/mkdocs"
+    echo "Exiting"
+    exit 0
+fi
+
+###########################
+# We should be good to go !
+###########################
 
 echo ""
 echo "=== Creating Multipage Example Site ==="
@@ -32,10 +69,10 @@ $ddc $data_dir/geology   > $site_dir/docs/geology.md
 $ddc $data_dir/physics   > $site_dir/docs/physics.md
 
 echo "Using MkDocs to build site ..."
-source ~/virt_environments/mkdocs/bin/activate
 pushd $site_dir > /dev/null
 # The site will be built using the mkdocs.yml in this directory.
-mkdocs build 2>&1 | sed 's/INFO//'
+# The sed just removes any leading "INFO" string. 
+mkdocs build 2>&1 | sed 's/INFO\s*/  /'
 popd > /dev/null
 
 echo ""
