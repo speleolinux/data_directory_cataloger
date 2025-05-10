@@ -1,0 +1,46 @@
+# MkDocs main configuration file for the science site example
+
+site_name: "Data Directory Catalog for Science"
+site_url: "http://localhost"
+repo_url: https://github.com/UTS-eResearch/data_directory_cataloger
+use_directory_urls: true
+#docs_dir: docs_science
+#site_dir: site_science
+
+markdown_extensions:
+  - tables
+  - toc:
+      toc_depth: 2
+      permalink: True
+      separator: "_"
+
+extra:
+  homepage: "https://eresearch.uts.edu.au"
+
+# The macros plugin for MkDocs is very useful. Docs for that are here:
+# https://mkdocs-macros-plugin.readthedocs.io/en/latest/
+plugins:
+    - search
+    #- macros
+
+# Themes supplied with MkDocs are: mkdocs readthedocs.
+# To use the material theme: "pip install mkdocs-material".
+theme:
+  name: material
+  features:
+    - navigation.top        # Creates a back-to-top "arrow icon" at bottom RHS.
+    - navigation.instant
+    - navigation.expand     # Left sidebar will expand all collapsible subsections by default.
+
+extra_css: [css/extra.css]
+
+nav:
+  - "Home": index.md
+  - "Directories":
+    - "Science Faculty":      science.md
+    - "Science / Astronomy":  astronomy.md
+    - "Science / Biology":    biology.md
+    - "Science / Geology":    geology.md
+    - "Science / Physics":    physics.md
+  - "About this Site": about.md
+
