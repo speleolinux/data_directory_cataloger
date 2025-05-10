@@ -37,7 +37,7 @@ files which describe the data and who manages it. The README.yaml files can be a
 be programatically searched for metadata such as the data manager or data disposal
 dates.
 
-See the [Examples Readme](examples/README_examples.md) for a example HTML page and a screenshot.
+See the [Examples](EXAMPLES.md) for links to some examples.
 
 # Requirements
 
