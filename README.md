@@ -44,16 +44,20 @@ See the [Examples](EXAMPLES.md) for links to some examples.
 Python 3.6.8 or later with PyYAML 6.0 is required for the basic `ddc.py` program.
 The `write_readmes.py` program does not require any extra Python modules.
 
-If you wish to create a MkDocs site then you will need to install the `mkdocs` module
-and perhaps a module for whatever theme you wish to use. For instance I have the 
-following mkdocs modules installed:
+If you wish to create a web site from multiple Markdown docs then you will need
+to install a static web site generator. I'm using MkDocs <https://www.mkdocs.org>. 
+But you could also use Hugo or Jekyl etc.
+
+I'm using MkDocs installed in a Python virtual environment plus some other
+mkdocs modules for the Material theme and some useful macros. For instance
+I have the following mkdocs modules installed:
 
     mkdocs==1.3.1
-    mkdocs-macros-plugin==0.7.0
     mkdocs-material==8.4.2
+    mkdocs-macros-plugin==0.7.0
 
 It is best to install these into a Python virtual environment which can be sourced
-before running the programs. See the script `update_site_example.sh` as an example.
+before running the programs. See the bash update scripts in the examples directory.
 
 # License
 
