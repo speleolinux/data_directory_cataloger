@@ -45,8 +45,8 @@ Python 3.6.8 or later with PyYAML 6.0 is required for the basic `ddc.py` program
 The `write_readmes.py` program does not require any extra Python modules.
 
 If you wish to create a web site from multiple Markdown docs then you will need
-to install a static web site generator. I'm using MkDocs <https://www.mkdocs.org>. 
-But you could also use Hugo or Jekyl etc.
+to install a static web site generator. I'm using MkDocs <https://www.mkdocs.org>, 
+but you could also use Hugo or Jekyl etc.
 
 I'm using MkDocs installed in a Python virtual environment plus some other
 mkdocs modules for the Material theme and some useful macros. For instance
