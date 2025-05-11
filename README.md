@@ -52,9 +52,9 @@ I'm using MkDocs installed in a Python virtual environment plus some other
 mkdocs modules for the Material theme and some useful macros. For instance
 I have the following mkdocs modules installed:
 
-    mkdocs==1.3.1
-    mkdocs-material==8.4.2
-    mkdocs-macros-plugin==0.7.0
+    mkdocs==1.6.1
+    mkdocs-material==9.6.12
+    mkdocs-macros-plugin==1.3.7
 
 It is best to install these into a Python virtual environment which can be sourced
 before running the programs. See the bash update scripts in the examples directory.
