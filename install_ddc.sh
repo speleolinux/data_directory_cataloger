@@ -19,7 +19,7 @@
 dest='/opt/ddc/bin'
 
 # For the UTS use this:
-#dest='/opt/eresearch/ddc/bin'
+dest='/opt/eresearch/ddc/bin'
 
 # Nothing else below here needs to be changed.
 
@@ -38,41 +38,6 @@ function get_installed_version {
         installed_version=${installed_version//\"}
     else
         installed_version=''
-    fi
-}
-
-function get_git_version {
-    # THIS FUNCTION IS NO LONGER USED.
-    #
-    # This gets the current git version string.
-    #
-    # If this repo is checked out at a tagged release version then just
-    # use the tag number only for the displayed version, like 2.0.0.
-    # If this repo is not at a tagged release then we wish to know the exact
-    # patch that a user might be using so use the long "git describe" string
-    # like 2.0.0-6-g382c9e0.
-    #
-    # The command "git describe" string format is:
-    #   'tag' - 'number of commits' - 'abbreviated commit name'
-    #
-    # e.g. git describe 2.0.0 --long
-    #      2.0.0-0-g7ef3b13  <== The middle number is zero.
-    #
-    # e.g. git describe --long
-    #      2.0.0-6-g382c9e0  <== The middle number is not zero.
-    #
-    description=$(git describe --long)
-    version_num=$(echo $description | cut -d '-' -f1)  # e.g. 2.0.0
-    num_commits=$(echo $description | cut -d '-' -f2)  # e.g. 1
-    commit_hash=$(echo $description | cut -d '-' -f3)  # e.g. g1d02627
-    if [ $num_commits -eq 0 ]; then
-        # This is a tagged release.
-        # The git_version will be just e.g. 1.3.0
-        git_version=$version_num
-    else
-        # This version has commits after the last tagged release.
-        # The git_version will be like e.g. 1.3.0-34-gb0df536
-        git_version="$version_num + $num_commits ($commit_hash)"
     fi
 }
 
@@ -134,7 +99,6 @@ echo ""
 
 # Get the current git version and if the user already has
 # a version installed get the version of that as well.
-# get_git_version <== This function is no longer used.
 git_version=$(git describe --abbrev=0)
 get_installed_version
 
