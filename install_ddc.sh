@@ -46,12 +46,14 @@ function create_backup {
     # But once todays backup is created, don't overwrite it again.
 
     TODAY=$(date "+%Y.%m.%d")   # Todays date, 2013.12.26
-    
-    if [ -f ${dest}/ddc.py ] && [ ! -f ${dest}/ddc_${TODAY}.py ]; then
-        echo "Copying ddc.py to backup."
-        cp ${dest}/ddc.py ${dest}/ddc_${TODAY}.py
+    current="${dest}/ddc.py"
+    backup="${dest}/ddc_${TODAY}.py"
+
+    if [ -f $current ] && [ ! -f $backup ]; then
+        echo "Copying current ddc.py to backup $backup"
+        cp $current $backup
         if [ $? -ne 0 ]; then
-            echo "Could not create backup."
+            echo "Could not create backup $backup."
             echo "Perhaps you need to use sudo. Exiting."
             exit 1
         else    
@@ -117,7 +119,7 @@ echo "The version of ddc.py to be installed is $git_version"
 echo ""
 read -r -p "Type \"y\" to install. Any other key will exit: " REPLY
 if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-    echo "exiting"
+    echo "Exiting"
     exit 0
 fi
 
@@ -130,7 +132,7 @@ if [ ! -d $dest ]; then
         echo "Perhaps you need to use sudo like this:"
         echo " sudo $0"
         echo "Exiting"
-        exit 0
+        exit 1
     fi
 fi
 
