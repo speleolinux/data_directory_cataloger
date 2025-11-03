@@ -1,0 +1,24 @@
+# git ignore local only
+
+# Ignore these files
+.gitignore_local
+
+# These markdown pages are generated from the data under the 
+# "Multiple_Example/science" directory by running the script:
+# Multiple_Example/update_science_site.sh
+# Hence they can be ignored.
+examples/Multiple_Example/science_site/docs/astronomy.md
+examples/Multiple_Example/science_site/docs/biology.md
+examples/Multiple_Example/science_site/docs/geology.md
+examples/Multiple_Example/science_site/docs/physics.md
+examples/Multiple_Example/science_site/docs/science.md
+
+# Similarly all the final HTML pages under the site directory
+# are generated from the above Markdown pages when MkDocs runs
+# so these also can be ignored.
+examples/Multiple_Example/science_site/site/
+
+# Ignore these directories
+archived
+tmp
+
