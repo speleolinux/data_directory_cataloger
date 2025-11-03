@@ -2,7 +2,7 @@
 
 site_name: "Data Directory Catalog for Science"
 site_url: "http://localhost"
-repo_url: https://github.com/UTS-eResearch/data_directory_cataloger
+repo_url: https://github.com/speleolinux/data_directory_cataloger
 use_directory_urls: true
 #docs_dir: docs_science
 #site_dir: site_science
@@ -15,7 +15,7 @@ markdown_extensions:
       separator: "_"
 
 extra:
-  homepage: "https://eresearch.uts.edu.au"
+  homepage: https://www.caves.org.au
 
 # The macros plugin for MkDocs is very useful. Docs for that are here:
 # https://mkdocs-macros-plugin.readthedocs.io/en/latest/
