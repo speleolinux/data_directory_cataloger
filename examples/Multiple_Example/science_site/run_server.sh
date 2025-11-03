@@ -7,5 +7,5 @@
 # You also need to run this script from within the science_site directory.
 
 source ~/virtualenvs/mkdocs/bin/activate
-mkdocs serve -a localhost:8080
+mkdocs serve --livereload -a localhost:8080
 
