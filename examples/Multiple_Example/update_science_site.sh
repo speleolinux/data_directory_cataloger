@@ -14,7 +14,7 @@ site_dir="science_site" # The directory to write the Markdown files into.
 # MkDocs static website generator.
 # This directory should contain the "bin/activate" script.
 # Do not add a trailing slash at the end of this location.
-virt_env="$HOME/virt_environments/mkdocs"
+virt_env="$HOME/virtualenvs/mkdocs"
 
 ddc="../../ddc.py"      # Where to find the DDC program.
 

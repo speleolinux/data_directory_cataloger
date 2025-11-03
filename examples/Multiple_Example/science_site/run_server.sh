@@ -6,6 +6,6 @@
 # You need to have already created the mkdocs virtual environment below.
 # You also need to run this script from within the science_site directory.
 
-source ~/virt_environments/mkdocs/bin/activate
+source ~/virtualenvs/mkdocs/bin/activate
 mkdocs serve -a localhost:8080
 

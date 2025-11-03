@@ -25,7 +25,7 @@ if [ ! -d docs ]; then mkdir docs; fi
 # You can also use "mkdocs serve" to view a static website at localhost.
 # You will need to have created a Python 3 virtual environment called "mkdocs" first.
 # Then installed MkDocs within that Python environment.
-source ~/virt_environments/mkdocs/bin/activate
+source ~/virtualenvs/mkdocs/bin/activate
 mkdocs build
 
 # Rsync the "site" directory to your website directory.
