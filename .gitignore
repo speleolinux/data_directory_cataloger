@@ -1,4 +1,4 @@
-# git ignore local only
+# git ignore
 
 # Ignore these files
 .gitignore_local
